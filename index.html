@@ -42,24 +42,39 @@
 
   <section class="main-contact">
     <div class="container">
-      <form class="form" action="#" method="">
+      <form class="form clearfix" action="#" method="">
+
         <div class="form-col-1">
           <div class="form-row">
-            <label for="formName">Name:</label>
+            <label for="formName" class="visuallyhidden">Name:</label>
             <input type="text" name="name" id="formName" placeholder="Imię">
           </div>
           <div class="form-row">
-            <label for="formEmail">Email:</label>
+            <label for="formEmail" class="visuallyhidden">Email:</label>
             <input type="email" name="name" id="formEmail" placeholder="Email">
           </div>
           <div class="form-row">
-            <label for="message">Message:</label>
-            <textarea name="message" id="message" placeholder="wiadomość"></textarea>
+            <label for="message" class="visuallyhidden">Message:</label>
+            <textarea name="message" id="message" placeholder="Wiadomość"></textarea>
           </div>
+      </div>
 
-        <div class="form-col-2">
+      <div class="form-col-2">
+        <span class="form-adon"></span>
 
+        <div class="form-row">
+          <label for="checkbox" class="checkbox">
+            <input type="checkbox" name="checkbox" id="checkbox" placeholder="Email">
+            <span class="checkbox-mark"></span>
+            Zgadzam się na przetwarzanie danych osobowych
+          </label>
+
+          <div class="form-row">
+            <button type="button" class="button">Wyślij</button>
+          </div>
         </div>
+      </div>
+
       </form>
     </div>
   </section>
