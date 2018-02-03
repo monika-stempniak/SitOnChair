@@ -1,2 +1,2 @@
-# sitonchair
-Super warsztat
+# SitOnChair
+Warsztat - layout strony
