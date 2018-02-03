@@ -15,14 +15,44 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    position: relative;
+}
+
+
+.price-list-box:before {
+    content: "";
+    width: 54px;
+    height: 54px;
+    background: #FFF;
+    border: 2px solid #D4D4D4;
+    border-radius: 50%;
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.price-list-box:after {
+    content: "";
+    width: 25px;
+    height: 25px;
+    background: #D4D4D4;
+    border-radius: 50%;
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
 }
 
 .price-list-box .price-list-box-title {
-    font-size: 26px;
+    font-size: 25px;
     text-align: center;
     text-transform: uppercase;
-    color: #27C7AB;
+    color: var(--color);
     margin-top: 20px;
+    font-weight: 500;
 }
 
 .price-list-box .price-list-box-price {
@@ -32,7 +62,7 @@
     border-radius: 50%;
     border: 2px solid #D4D4D4;
     background: #FFF;
-    margin: 35px auto;
+    margin: 30px auto;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -45,7 +75,7 @@
 
 .price-list-box .price-cnt .price {
     font-size: 45px;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .price-list-box .price-cnt .small {
@@ -56,6 +86,7 @@
 .price-list-box .price-text {
     text-align: center;
     font-size: 15px;
+    font-weight: 600;
     text-transform: uppercase;
     color: #C2C2C2;
 }
@@ -79,19 +110,21 @@
     font-size: 16px;
     margin-top: auto;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
 }
 
 .price-list-box .button {
     font-size: 16px;
-    padding: 4px 25px;
+    padding: 8px 32px;
     margin-top: auto;
+    font-weight: 300;
 }
 
 /* active */
-.price-list-box.active {
-    background: #27C7AB;
-    border-color: #27C7AB;
+.price-list-box.active,
+.price-list-box.active:before {
+    background: var(--color);
+    border-color: var(--color);
 }
 
 .price-list-box.active .price-list-box-title {
@@ -99,16 +132,22 @@
 }
 
 .price-list-box.active .price-list-box-price {
-    border-color: #27C7AB;
+    border-color: var(--color);
 }
 
 .price-list-box.active .price-cnt .price,
 .price-list-box.active .price-cnt .small,
 .price-list-box.active .price-text {
-    color: #27C7AB
+    color: var(--color);
 }
 
 .price-list-box.active .button {
     background: #FFF;
-    color: #27C7AB;
+    color: var(--color);
+    font-weight: 600;
+}
+
+.price-list-box.active .price-list-box-points li:nth-of-type(odd),
+.price-list-box.active:after {
+    background: #FFF;
 }

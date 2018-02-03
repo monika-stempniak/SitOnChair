@@ -15,7 +15,7 @@
     color:#fff;
     text-decoration: none;
     text-transform: uppercase;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 40px;
     padding:0 25px;
 }
@@ -35,12 +35,13 @@
 
     opacity:0;
     visibility: hidden;
-    transition: 0.1s all;
+    transition: 0.5s all;
 }
 
 .page-nav li:hover .page-nav-sub {
     visibility: visible;
     opacity:1;
+    transition: 0.5s all;
 }
 
 .page-nav-sub:before {

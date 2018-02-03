@@ -18,13 +18,13 @@
 }
 
 .section-title {
-    width:33.3333%;
+    width: calc(33.3333% - 20px);
     font-size:22px;
     font-weight: 600;
     color:#666;
     text-transform: uppercase;
     padding-bottom: 10px;
-    border-bottom:7px solid var(--color);
+    border-bottom:8px solid var(--color);
     margin-bottom: 40px;
 }
 
