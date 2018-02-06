@@ -18,7 +18,6 @@
     position: relative;
 }
 
-
 .price-list-box:before {
     content: "";
     width: 54px;
@@ -30,7 +29,6 @@
     top: -10px;
     left: 50%;
     transform: translate(-50%, -50%);
-
 }
 
 .price-list-box:after {
@@ -43,7 +41,6 @@
     top: -10px;
     left: 50%;
     transform: translate(-50%, -50%);
-
 }
 
 .price-list-box .price-list-box-title {
@@ -89,9 +86,6 @@
     font-weight: 600;
     text-transform: uppercase;
     color: #C2C2C2;
-}
-
-.price-list-box .price-list-box-points {
 }
 
 .price-list-box .price-list-box-points li {
