@@ -1,9 +1,34 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-  // ----- dropdown menu -----
-  // variables
+  // ----- GLOBAL VARIABLES -----
+
   var pageNavMenu = document.querySelectorAll(".page-nav .nav-menu-list");
   var mainSlider = document.getElementById("mainSlider");
+
+  var infoBoxes = document.querySelectorAll('.info-box');
+
+  var mainSliderSlides = mainSlider.querySelectorAll('.main-slider-slide');
+  var btnPrev = mainSlider.querySelector('.main-slider-prev');
+  var btnNext = mainSlider.querySelector('.main-slider-next');
+
+  var application = document.querySelector('.application');
+
+  var listOfPanels = application.querySelectorAll('.list_panel');
+  var listArrow = application.querySelectorAll('.list_arrow');
+
+  var summaryPanel = application.querySelector('.summary_panel');
+  var panelLeft = summaryPanel.querySelector('.panel_left');
+  var panelRight = summaryPanel.querySelector('.panel_right');
+
+  var summary = application.querySelector('.sum strong');
+
+  var checkbox = application.querySelector('input[type="checkbox"]');
+
+  var transport = panelLeft.querySelector('.transport');
+  var transportValue = panelRight.querySelector('.transport');
+
+
+  // ----- DROPDOWN MENU -----
 
   // mouse events
   pageNavMenu.forEach(function(li) {
@@ -23,9 +48,8 @@ document.addEventListener('DOMContentLoaded', function() {
       });
   });
 
-  // ----- hiding info-box text ------
-  // variables
-  var infoBoxes = document.querySelectorAll('.info-box');
+
+  // ----- HIDING INFO-BOX TEXT ------
 
   // mouse events
   infoBoxes.forEach(function(box) {
@@ -43,14 +67,12 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  // ----- SLIDER ------
-  // variables
-  var mainSliderSlides = mainSlider.querySelectorAll('.main-slider-slide');
-  var btnPrev = mainSlider.querySelector('.main-slider-prev');
-  var btnNext = mainSlider.querySelector('.main-slider-next');
 
-  // slide's index
+  // ----- SLIDER ------
+
+  // auxiliary slide's index variable
   var index = 0;
+
   // added class .active to show the first slide
   mainSliderSlides[index].classList.add('active');
 
@@ -79,19 +101,10 @@ document.addEventListener('DOMContentLoaded', function() {
     mainSliderSlides[index].classList.add('active');
   });
 
-  // ----- CALCULATOR ------
-  // variables
-  var application = document.querySelector('.application');
-  // drop-down menu variables
-  var listOfPanels = application.querySelectorAll('.list_panel');
-  var listArrow = application.querySelectorAll('.list_arrow');
-  // summary panel variables
-  var summaryPanel = application.querySelector('.summary_panel');
-  var panelLeft = summaryPanel.querySelector('.panel_left');
-  var panelRight = summaryPanel.querySelector('.panel_right');
 
-  // summing up
-  var summary = application.querySelector('.sum strong');
+  // ----- CALCULATOR ------
+
+  // summing up - auxiliary variable
   var sum = 0;
 
   // dropping down list after clicking an arrow
@@ -111,11 +124,11 @@ document.addEventListener('DOMContentLoaded', function() {
           listLabel.innerText = this.innerText;
           listLabel.style.color = '#666';
 
-          // summary left panel variables
+          // summary left panel local variables
           var title = panelLeft.querySelector('.title');
           var color = panelLeft.querySelector('.color');
           var pattern = panelLeft.querySelector('.pattern');
-          // summary right panel variables
+          // summary right panel local variables
           var titleValue = panelRight.querySelector('.title');
           var colorValue = panelRight.querySelector('.color');
           var patternValue = panelRight.querySelector('.pattern');
@@ -157,12 +170,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  // ----- checking transport checkbox -----
-  // transport checkbox variable
-  var checkbox = application.querySelector('input[type="checkbox"]');
-  // summary panel transport variables
-  var transport = panelLeft.querySelector('.transport');
-  var transportValue = panelRight.querySelector('.transport');
+  //checking transport checkbox
+
   //setting transport value into summary panel
   checkbox.addEventListener('click', function() {
     if (checkbox.checked) {
