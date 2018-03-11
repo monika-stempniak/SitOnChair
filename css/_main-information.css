@@ -9,10 +9,16 @@
 .info-box {
     position: relative;
     display: inline-block;
+    overflow: hidden;
 }
 
 .info-box-img {
     display: block;
+    transition: all.5s .5s linear;
+}
+
+.enlarge {
+    transform: scale(1.02);
 }
 
 .info-box-cnt {
@@ -22,6 +28,12 @@
     width:100%;
     background: rgba(255,255,255,0.5);
     padding:15px;
+    transition: all .5s linear;
+}
+
+.hide {
+    opacity: 0;
+    transform: rotateX(90deg);
 }
 
 .info-box-title {
