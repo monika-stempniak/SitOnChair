@@ -1,6 +1,7 @@
 @import url("_variables.css");
 @import url("_global-classes.css");
 @import url("_layout.css");
+@import url("_application.css");
 @import url("_header.css");
 @import url("_main-banner.css");
 @import url("_main-information.css");
