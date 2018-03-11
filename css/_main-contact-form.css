@@ -38,6 +38,7 @@
     width:100%;
     font-size:35px;
     padding:15px 23px;
+    font-weight: normal;
 }
 
 .form input[type="text"],
@@ -80,45 +81,4 @@
 
 .form :-moz-placeholder {
     color: #ccc;
-}
-
-.checkbox {
-    display: block;
-    font-size: 20px;
-    color: #ccc;
-}
-
-.checkbox input {
-    position: absolute;
-    left:-999999px;
-}
-
-.checkbox-mark {
-    width:48px;
-    height:48px;
-    border:1px solid var(--color);
-    vertical-align: top;
-    float:left;
-    position: relative;
-    margin-right:10px;
-}
-
-.checkbox-mark:before {
-    content:'';
-    position: absolute;
-    left:50%;
-    top:50%;
-    width:44px;
-    height:44px;
-    background-image: url(../images/form_ok.jpg);
-    transform: translate(-50%, -50%) scale(0.2);
-    background-position: center center;
-    background-repeat: no-repeat;
-    opacity:0;
-    transition:0.5s all;
-}
-
-input:checked + .checkbox-mark:before {
-    opacity:1;
-    transform: translate(-50%, -50%) scale(1);
 }
