@@ -1,5 +1,6 @@
 # SitOnChair
-Webpage layout
+
+## Webpage layout
 
 My website project created in HTML and CSS. I use JavaScript to add functionalities like slider, dropdown menu and calculator.
 
