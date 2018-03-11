@@ -138,7 +138,11 @@
 .price-list-box.active .button {
     background: #FFF;
     color: var(--color);
-    font-weight: 600;
+    font-weight: 500;
+}
+
+.price-list-box.active .button:hover {
+    color: #8F8F8F;
 }
 
 .price-list-box.active .price-list-box-points li:nth-of-type(odd),
