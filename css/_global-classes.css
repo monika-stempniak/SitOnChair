@@ -15,6 +15,12 @@
     border-radius: 7px;
     padding:10px 20px;
     text-decoration:none;
+    outline: none;
+    transition: .5s;
+}
+
+.button:hover {
+    background-color: var(--colorHover);
 }
 
 .section-title {
@@ -68,4 +74,51 @@
     padding:0 15px;
     width:33.3333%;
     float:left;
+}
+
+/* checkbox */
+
+.checkbox {
+    display: block;
+    font-size: 20px;
+    color: #ccc;
+}
+
+.checkbox input {
+    display: block;
+    opacity: 0;
+    height: 48px;
+    width: 48px;
+    position: absolute;
+    cursor: pointer;
+}
+
+.checkbox-mark {
+    width:48px;
+    height:48px;
+    border:1px solid var(--color);
+    vertical-align: top;
+    float:left;
+    position: relative;
+    margin-right:10px;
+}
+
+.checkbox-mark:before {
+    content:'';
+    position: absolute;
+    left:50%;
+    top:50%;
+    width:44px;
+    height:44px;
+    background-image: url(../images/form_ok.jpg);
+    transform: translate(-50%, -50%) scale(0.2);
+    background-position: center center;
+    background-repeat: no-repeat;
+    opacity:0;
+    transition:0.5s all;
+}
+
+input:checked + .checkbox-mark:before {
+    opacity:1;
+    transform: translate(-50%, -50%) scale(1);
 }
