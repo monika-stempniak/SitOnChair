@@ -19,9 +19,11 @@
     color:#fff;
     text-decoration: none;
     line-height: 40px;
+    display: block;
 }
 
 .page-logo a span {
     color : var(--color);
     font-weight: 700;
 }
+
