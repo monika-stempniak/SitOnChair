@@ -79,6 +79,84 @@ document.addEventListener('DOMContentLoaded', function() {
     mainSliderSlides[index].classList.add('active');
   });
 
+  // ----- CALCULATOR ------
+  // variables
+  var application = document.querySelector('.application');
+  // drop-down menu variables
+  var listOfPanels = application.querySelectorAll('.list_panel');
+  var listArrow = application.querySelectorAll('.list_arrow');
+  // summary panel variables
+  var summaryPanel = application.querySelector('.summary_panel');
+  var panelLeft = summaryPanel.querySelector('.panel_left');
+  var panelRight = summaryPanel.querySelector('.panel_right');
+
+  // summing up
+  var summary = application.querySelector('.sum strong');
+  var sum = 0;
+
+  // dropping down list after clicking an arrow
+  listArrow.forEach(function(arrow) {
+    arrow.addEventListener('click', function() {
+      var dropDownList = this.parentElement;
+      var listPanel = dropDownList.querySelector('.list_panel');
+      listPanel.classList.toggle('drop-down');
+      this.classList.toggle('arrow-up');
+
+      // choosing a single item from drop-down list
+      var listPanelItems = listPanel.querySelectorAll('li');
+
+      listPanelItems.forEach(function(panelItem) {
+        panelItem.addEventListener('click', function() {
+          var listLabel = dropDownList.firstElementChild;
+          listLabel.innerText = this.innerText;
+          listLabel.style.color = '#666';
+
+          // summary left panel variables
+          var title = panelLeft.querySelector('.title');
+          var color = panelLeft.querySelector('.color');
+          var pattern = panelLeft.querySelector('.pattern');
+          // summary right panel variables
+          var titleValue = panelRight.querySelector('.title');
+          var colorValue = panelRight.querySelector('.color');
+          var patternValue = panelRight.querySelector('.pattern');
+
+          // setting values into summary panel
+          if (this.className === 'chair') {
+            sum -= Number(titleValue.innerText);
+            title.innerText = 'Chair ' + listLabel.innerText;
+            titleValue.innerText = this.dataset.chairprice;
+            sum += Number(titleValue.innerText);
+            summary.innerText = sum + ' zł';
+          }
+          if (this.className === 'color') {
+            sum -= Number(colorValue.innerText);
+            color.innerText = 'k. ' + listLabel.innerText;
+            colorValue.innerText = '0';
+            sum += Number(colorValue.innerText);
+            summary.innerText = sum + ' zł';
+          }
+          if (this.className === 'fabric') {
+            sum -= Number(patternValue.innerText);
+            pattern.innerText = listLabel.innerText;
+            patternValue.innerText = this.dataset.fabricprice;
+            sum += Number(patternValue.innerText);
+            summary.innerText = sum + ' zł';
+          }
+
+          // hiding drop-down menu after choosing panel item
+          listOfPanels.forEach(function(panel) {
+            if (panel.classList.contains('drop-down')) {
+              listPanel.classList.toggle('drop-down');
+              arrow.classList.toggle('arrow-up');
+            }
+          })
+
+        });
+      });
+
+    });
+  });
+
   
 
 });
