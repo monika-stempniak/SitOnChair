@@ -157,6 +157,25 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  
+  // ----- checking transport checkbox -----
+  // transport checkbox variable
+  var checkbox = application.querySelector('input[type="checkbox"]');
+  // summary panel transport variables
+  var transport = panelLeft.querySelector('.transport');
+  var transportValue = panelRight.querySelector('.transport');
+  //setting transport value into summary panel
+  checkbox.addEventListener('click', function() {
+    if (checkbox.checked) {
+      transport.innerText = 'transport';
+      transportValue.innerText = checkbox.dataset.transportprice;
+      sum += Number(transportValue.innerText);
+      summary.innerText = sum + ' zł';
+    } else {
+      sum -= Number(transportValue.innerText);
+      summary.innerText = sum + ' zł';
+      transport.innerText = null;
+      transportValue.innerText = null;
+    }
+  })
 
 });
