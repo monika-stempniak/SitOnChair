@@ -25,7 +25,7 @@
 
             <nav class="page-nav">
                 <ul>
-                    <li>
+                    <li class="nav-menu-list">
                         <a href="">O firmie</a>
 
                         <ul class="page-nav-sub">
@@ -35,8 +35,8 @@
                         </ul>
 
                     </li>
-                    <li><a href="">Galeria</a></li>
-                    <li><a href="">Kontakt</a></li>
+                    <li class="nav-menu-list"><a href="">Galeria</a></li>
+                    <li class="nav-menu-list"><a href="">Kontakt</a></li>
                 </ul>
             </nav>
 
@@ -55,13 +55,13 @@
                 </button>
 
                 <div class="main-slider-slides-cnt">
-                    <div class="main-slider-slide active">
+                    <div class="main-slider-slide">
                         <div class="slide-image">
                             <img src="images/black_chair.png">
                         </div>
                         <div class="slide-cnt">
                             <h4 class="slide-title">
-                                1 SIT <span><strong>ON</strong></span> OUR <span><strong>CHAIR</strong></span>
+                                SIT <span><strong>ON</strong></span> OUR <span><strong>CHAIR</strong></span>
                             </h4>
                             <div class="slide-text">
                                 Lorem ipsum dolor sit amet enim. Etiam ullamcorper.<br>
@@ -74,11 +74,11 @@
                     </div>
                     <div class="main-slider-slide">
                         <div class="slide-image">
-                            <img src="images/black_chair.png">
+                            <img src="images/red_chair.png">
                         </div>
                         <div class="slide-cnt">
                             <h4 class="slide-title">
-                                2 SIT <span><strong>ON</strong></span> OUR <span><strong>CHAIR</strong></span>
+                                SIT <span><strong>ON</strong></span> OUR <span><strong>CHAIR</strong></span>
                             </h4>
                             <div class="slide-text">
                                 Lorem ipsum dolor sit amet enim. Etiam ullamcorper.<br>
@@ -211,6 +211,84 @@
         </div>
     </section>
 
+    <section class="application">
+        <div class="container">
+            <div class="row">
+                <section class="choice_part col col-1-3">
+                    <header>
+                        <h3 class="section-title">SKOMPONUJ SWOJE KRZESŁO</h3>
+                    </header>
+
+                    <div class="form">
+                        <div class="drop_down_list">
+                            <span class="list_label">Wybierz rodzaj</span>
+                            <span class="list_arrow"></span>
+                            <ul class="list_panel">
+                                <li class="chair" data-chairprice="500">Clair</li>
+                                <li class="chair" data-chairprice="600">Margarita</li>
+                                <li class="chair" data-chairprice="400">Selena</li>
+                            </ul>
+                        </div>
+                        <div class="drop_down_list">
+                            <span class="list_label">Wybierz kolor</span>
+                            <span class="list_arrow"></span>
+                            <ul class="list_panel">
+                                <li class="color">czerwony</li>
+                                <li class="color">czarny</li>
+                                <li class="color">pomarańczowy</li>
+                            </ul>
+                        </div>
+                        <div class="drop_down_list">
+                            <span class="list_label">Wybierz materiał</span>
+                            <span class="list_arrow"></span>
+                            <ul class="list_panel">
+                                <li class="fabric" data-fabricprice="0">tkanina</li>
+                                <li class="fabric" data-fabricprice="100">skóra</li>
+                            </ul>
+                        </div>
+                        <div class="form-row">
+                            <label class="checkbox">
+                                <input type="checkbox" name="transport" data-transportprice="80">
+                                <span class="checkbox-mark"></span>
+                                <span class="list_label inline_text">Transport</span>
+                            </label>
+                        </div>
+                    </div>
+                </section><!-- e: choise_part col col-1-3 -->
+    
+                <section class="image_part col col-1-3">
+                    <img src="images/red_chair.png">
+                </section><!-- e: image_part col col-1-3 -->
+
+                <section class="summary_part col col-1-3">
+                    <header class="align_right">
+                        <h3 class="section-title">PODSUMOWANIE</h3>
+                    </header>
+
+                    <div class="summary_panel">
+                        <div class="panel_left">
+                            <h4 class="title">Twój fotel</h4>
+                            <span class="color"></span>
+                            <span class="pattern"></span>
+                            <span class="transport"></span>
+                        </div><!--
+                     --><div class="panel_right">
+                            <h4 class="title value"></h4>
+                            <span class="color value"></span>
+                            <span class="pattern value"></span>
+                            <span class="transport value"></span>
+                        </div>
+                        <div class="sum_label">SUMA</div>
+                        <div class="sum"><strong></strong></div>
+                    </div>
+                    <div class="form-row">
+                        <a href="" class="button">Zamawiam</a>
+                    </div>
+                </section><!-- e: summary_part col col-1-3 -->
+            </div>
+        </div>
+    </section>
+
     <section class="main-contact">
         <div class="container">
             <h2 class="section-title">
@@ -283,6 +361,6 @@
         </div>
     </footer>
 
-    <script src="js/scripts.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
