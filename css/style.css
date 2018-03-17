@@ -1,20 +1,15 @@
-/* @import url("_variables.css");
-@import url("_global-classes.css");
-@import url("_layout.css");
-@import url("_application.css");
-@import url("_header.css");
-@import url("_main-banner.css");
-@import url("_main-information.css");
-@import url("_main-prices.css");
-@import url("_main-footer.css");
-@import url("_main-contact-form.css");
-@import url("_nav.css");
-@import url("_socials.css"); */
+/* -------------------------------------------- */
+/* variables */
+/* -------------------------------------------- */
 
 :root {
   --color: #24BAA0;
   --colorHover: #13A990;
 }
+
+/* -------------------------------------------- */
+/* layout */
+/* -------------------------------------------- */
 
 * {
   box-sizing: border-box;
@@ -23,6 +18,10 @@
 body {
   font-family: "Raleway", sans-serif;
 }
+
+/* -------------------------------------------- */
+/* global classes */
+/* -------------------------------------------- */
 
 .clearfix:after {
   content:'';
@@ -150,7 +149,7 @@ input:checked + .checkbox-mark:before {
 }
 
 /* -------------------------------------------- */
-/* Application */
+/* application */
 /* -------------------------------------------- */
 
 .application {
