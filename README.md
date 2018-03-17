@@ -1,7 +1,10 @@
 # SitOnChair &ndash; webpage layout
 
-My website project created in HTML and CSS. I use JavaScript to add functionalities like slider, dropdown menu and calculator.
+My website project created in HTML and CSS based on psd layout. I use Vanilla JavaScript to add functionalities like slider, dropdown menu and calculator.
 
-Based on psd layout:
+See the project here:
+https://monika-stempniak.github.io/SitOnChair/
+
+psd layout:
 
 ![Układ_strony](images/layout.jpg)
